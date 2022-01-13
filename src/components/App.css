@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 .App{
@@ -18,9 +19,11 @@ body {
 }
 
 .time{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 33%;
+  z-index: 2;
+  text-align: center;
 }
 .clock{
   font-size: 5rem;
@@ -94,6 +97,46 @@ body {
   transform: rotate(-45deg);
   top: 0;
 }
+.night{
+  position: absolute;
+}
+.moon{
+  cursor: pointer;
+  background: black;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 10px black, inset 14px 0px 3px 1px white;
+}
+.moon::before{
+  content: "";
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+  position: absolute;
+  right: 10px;
+  bottom: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.nightmode{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: .7;
+  transition: all .5s ease-in-out;
+}
+.nav{
+  z-index: 2;
+}
 
 .navMenu{
   position: absolute;
@@ -106,8 +149,9 @@ body {
   transition: all .5s ease-in-out;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-top: 2%;
 }
 .navMenu.open{
   transform: translateX(0);
