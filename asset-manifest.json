@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/homepage/static/css/main.7a99cbfc.css",
+    "main.js": "/homepage/static/js/main.210479ad.js",
+    "static/js/787.cc445424.chunk.js": "/homepage/static/js/787.cc445424.chunk.js",
+    "static/media/wallpaperflare.com_wallpaper.jpg": "/homepage/static/media/wallpaperflare.com_wallpaper.58d8c10bcab956693012.jpg",
+    "static/media/twitch.jpg": "/homepage/static/media/twitch.56a6c15c1a43b4ccfd2b.jpg",
+    "static/media/disney_plus_logo_1820.jpg": "/homepage/static/media/disney_plus_logo_1820.fcc1fe7a878789a81014.jpg",
+    "static/media/YouTube_full-color_icon_(2017).svg.png": "/homepage/static/media/YouTube_full-color_icon_(2017).svg.97c4f7a3982ae1bcb28e.png",
+    "static/media/netflix.png": "/homepage/static/media/netflix.b49e0e966ffa3d5149f1.png",
+    "index.html": "/homepage/index.html",
+    "main.7a99cbfc.css.map": "/homepage/static/css/main.7a99cbfc.css.map",
+    "main.210479ad.js.map": "/homepage/static/js/main.210479ad.js.map",
+    "787.cc445424.chunk.js.map": "/homepage/static/js/787.cc445424.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a99cbfc.css",
+    "static/js/main.210479ad.js"
+  ]
+}
