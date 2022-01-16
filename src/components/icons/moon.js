@@ -2,8 +2,8 @@ import React from 'react'
 
 const moon = (props) => {
     return (
-        <div>
-            <div onClick={props.click} className="moon" />
+        <div className="moon">
+            <div onClick={props.click}  className="moon-button" />
         </div>
     )
 }

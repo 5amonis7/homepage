@@ -24,9 +24,14 @@ function App() {
             setMenu(!menu)
         )
     }
+    function closeMenu(){
+      if(menu === true){
+        setMenu(!menu);
+      }
+    }
 
   return (
-    <div className="App">
+    <div onClick={closeMenu} className="App">
       {/* Nightmode */}
       <Night night={night} />
       {/* Moon icon */}
