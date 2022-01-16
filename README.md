@@ -1,4 +1,4 @@
-A custome Homepage i use for my desktop.
+A custome Homepage I use for my desktop.
 
 Moon button to the right to activate nightmode.
 
