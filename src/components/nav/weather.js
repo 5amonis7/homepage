@@ -15,10 +15,14 @@ const Weather = () => {
 
     let icon = 'http://openweathermap.org/img/w/' + img.toString() + '.png';
 
+
+    const API_KEY = process.env.REACT_APP_API_KEY;
+    const API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=Mableton&appid=${API_KEY}&units=imperial`
+
     // Fecthing weather from openweathermap api
     useEffect(() => {
         let isMounted = true;
-        fetch('https://api.openweathermap.org/data/2.5/forecast?q=Mableton&appid=3c7a68c7bf9dc991bdd462aa18785e96&units=imperial')
+        fetch(API_URL)
         .then( res => res.json())
         .then(data => {
             if (isMounted){

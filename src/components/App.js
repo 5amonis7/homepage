@@ -4,7 +4,7 @@ import Nav from './nav/nav';
 import Night from './icons/night';
 import { useState } from 'react';
 import Moon from './icons/moon.js';
-import Hamburger from './icons/hamburger'
+import Hamburger from './icons/hamburger';
 
 
 function App() {
