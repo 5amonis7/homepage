@@ -18,21 +18,25 @@ body {
   position: relative;
 }
 
+
+/* Main content in the middle */
 .time{
   position: absolute;
-  top: 30%;
-  left: 33%;
+  top: 20rem;
+  left: 37rem;
   z-index: 2;
   text-align: center;
 }
 .clock{
   font-size: 5rem;
   color: white;
+  text-shadow: 3px 0px 10px black;
 }
 .phrase{
   font-size: 4rem;
   color: white;
   font-style: italic;
+  text-shadow: 3px 0px 10px black;
 }
 .search{
   border-radius: 10px;
@@ -40,12 +44,17 @@ body {
   height: 2rem;
   border: none;
   box-shadow: 0px 0px 10px black;
+  font-size: 1.5rem;
 }
 .search::placeholder{
   font-size: 1.2rem;
   top: 7px;
   position: absolute;
 }
+
+
+
+/* Button for the nav bar */
 .hamburger-btn{
   position: absolute;
   top: 40%;
@@ -97,6 +106,9 @@ body {
   transform: rotate(-45deg);
   top: 0;
 }
+
+
+/* Button for the nightmode */
 .night{
   position: absolute;
 }
@@ -136,50 +148,87 @@ body {
   width: 100vw;
   height: 100vh;
   background: black;
-  opacity: .7;
   transition: all .5s ease-in-out;
 }
-.nav{
-  z-index: 2;
+.on{
+  opacity: .7;
+}
+.off{
+  opacity: .0;
 }
 
-.navMenu{
-  position: absolute;
+
+/* Navbar */
+.nav{
+  z-index: 2;
   top: 0;
   left: 0;
-  height: 100%;
+  position: absolute;
   width: 10vw;
+  height: 100%;
   background: rgba(0,0,0,.9);
   transform: translateX(-100%);
   transition: all .5s ease-in-out;
+  overflow: hidden;
+  box-shadow: 3px 0px 15px black
+}
+.nav.open{
+  transform: translateX(0);
+}
+
+
+/* Navbar Shows */
+.showsMenu{
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding-top: 2%;
-}
-.navMenu.open{
-  transform: translateX(0);
+  font-size: 3rem;
 }
 .netflix{
-  width: 100px;
+  width: 90px;
   height: auto;
-  margin: 40% 0 20% 0;
+  margin-right: 18px;
 }
 .disneyplus{
-  width: 100px;
+  width: 110px;
   height: auto;
-  border-radius: 10px;
-  margin: 40% 0 20% 0;
+  margin: 0px;
 }
 .youtube{
-  width: 100px;
+  width: 80px;
   height: auto;
-  margin: 40% 0 20% 0;
+  margin-right: 3px;
+  margin-left: 3px;
 }
 .twitch{
-  width: 100px;
-  height: auto;
-  border-radius: 10px;
-  margin: 40% 0 20% 0;
+  width: auto;
+  height: 70px;
+  margin-right: 20px;
+}
+.group1{
+  display: flex;
+  align-items: center;
+}
+.group2{
+  display: flex;
+  align-items: center;
+}
+.shows-line{
+  width: 90%;
+  margin: 50px 0px 0px 0px;
+  background: grey;
+  border: none;
+  height: 2px;
+}
+.shows{
+  color: white;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 0;
+  right: 1rem;
 }
