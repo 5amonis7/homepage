@@ -1,20 +1,16 @@
 {
   "files": {
-    "main.css": "/homepage/static/css/main.1718a94b.css",
-    "main.js": "/homepage/static/js/main.4db3f76c.js",
+    "main.css": "/homepage/static/css/main.2cb0d4de.css",
+    "main.js": "/homepage/static/js/main.4387f125.js",
     "static/js/787.cc445424.chunk.js": "/homepage/static/js/787.cc445424.chunk.js",
     "static/media/wallpaperflare.com_wallpaper.jpg": "/homepage/static/media/wallpaperflare.com_wallpaper.58d8c10bcab956693012.jpg",
-    "static/media/twitch.jpg": "/homepage/static/media/twitch.56a6c15c1a43b4ccfd2b.jpg",
-    "static/media/disney_plus_logo_1820.jpg": "/homepage/static/media/disney_plus_logo_1820.fcc1fe7a878789a81014.jpg",
-    "static/media/YouTube_full-color_icon_(2017).svg.png": "/homepage/static/media/YouTube_full-color_icon_(2017).svg.97c4f7a3982ae1bcb28e.png",
-    "static/media/netflix.png": "/homepage/static/media/netflix.b49e0e966ffa3d5149f1.png",
     "index.html": "/homepage/index.html",
-    "main.1718a94b.css.map": "/homepage/static/css/main.1718a94b.css.map",
-    "main.4db3f76c.js.map": "/homepage/static/js/main.4db3f76c.js.map",
+    "main.2cb0d4de.css.map": "/homepage/static/css/main.2cb0d4de.css.map",
+    "main.4387f125.js.map": "/homepage/static/js/main.4387f125.js.map",
     "787.cc445424.chunk.js.map": "/homepage/static/js/787.cc445424.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1718a94b.css",
-    "static/js/main.4db3f76c.js"
+    "static/css/main.2cb0d4de.css",
+    "static/js/main.4387f125.js"
   ]
 }
