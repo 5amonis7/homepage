@@ -191,71 +191,58 @@ body {
 
 
 /* Navbar Shows */
-.showsMenu{
+.shows{
   position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 2%;
-  font-size: 3rem;
+  top: 1rem;
+  right: 1rem;
+  width: 90%;
+  height: 25%;
 }
 .netflix{
   width: 90px;
   height: auto;
-  margin-right: 18px;
 }
 .disneyplus{
   width: 110px;
   height: auto;
-  margin: 0px;
 }
 .youtube{
   width: 80px;
   height: auto;
-  margin-right: 3px;
-  margin-left: 3px;
 }
 .twitch{
   width: auto;
   height: 70px;
-  margin-right: 20px;
 }
-.group1{
-  display: flex;
+.shows-links{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
   align-items: center;
-}
-.group2{
-  display: flex;
-  align-items: center;
+  height: 85%;
 }
 .shows-line{
-  width: 90%;
-  margin: 50px 0px 0px 0px;
+  width: 100%;
   background: grey;
   border: none;
   height: 2px;
 }
-.shows{
+.shows-title{
   color: white;
-  position: absolute;
   font-size: 1.5rem;
-  top: 0;
-  right: 1rem;
-  margin-top: 20px;
+  float: right;
 }
 
 /* Navbar weather */
 .weather{
   position: absolute;
-  bottom: 1rem;
+  top: 45rem;
   left: .2rem;
   height: 11em;
   width: 95%;
   border-radius: 10px;
-  background-image: linear-gradient( to bottom right, #3a89d4, #2c35d8);
+  background-image: linear-gradient( to bottom right, #65d5fa, #447ee2);
   opacity: .9;
   box-shadow: inset 0px 0px 10px black;
 }
@@ -288,15 +275,6 @@ body {
   width: 80%;
   height: 30%;
 }
-/* .weather-line{
-  border: none;
-  height: 3px;
-  background: white;
-  width: 70%;
-  border-radius: 3px;
-  max-height: inherit;
-  margin: 0;
-} */
 .F{
   font-size: 1.3rem;
   position: relative;
@@ -323,5 +301,55 @@ body {
   margin: 0;
   font-size: .9rem;
 }
+/* Navbar work */
+.work{
+  position: absolute;
+  top: 20rem;
+  right: 1rem;
+  width: 90%;
+  height: 25%;
+}
+.work-title{
+  color: white;
+  font-size: 1.5rem;
+  float: right;
+  padding-right: 5px;
+}
+.work-line{
+  width: 100%;
+  background: grey;
+  border: none;
+  height: 2px;
+}
+.work-links{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 85%;
+}
+
+.linkedin img{
+  width: 70px;
+  height: auto;
+}
+
+.github img{
+  width: 70px;
+  height: auto;
+}
+
+.stack img{
+  width: 70px;
+  height: auto;
+}
+
+.udemy img{
+  width: 70px;
+  height: auto;
+}
+
+
 
 
