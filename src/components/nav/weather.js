@@ -18,11 +18,12 @@ const Weather = () => {
     let icon = 'http://openweathermap.org/img/w/' + items.img + '.png';
 
 
-    const API_KEY = process.env.REACT_APP_API_KEY;
-    const API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=Mableton&appid=${API_KEY}&units=imperial`
+   
 
     // Fecthing weather from openweathermap api
     useEffect(() => {
+        const API_KEY = process.env.REACT_APP_API_KEY;
+        const API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=Mableton&appid=${API_KEY}&units=imperial`;
         let isMounted = true;
         fetch(API_URL)
         .then( res => res.json())
@@ -44,7 +45,10 @@ const Weather = () => {
         
         return () => { isMounted = false;}
     }, [])
+
     
+    console.log(items)
+
     return (
         <div className="weather">
             <p className='current'>{current}<span className='F'>&#8457;</span></p>
