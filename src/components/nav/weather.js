@@ -2,18 +2,20 @@ import React, { useState, useEffect } from 'react'
 
 const Weather = () => {
 
-    const [ items, setItems] = useState([])
-    const [ temp, setTemp ] = useState('')
-    const [ img, setImg ] = useState('')
-    const [ description, setDescription ] = useState('')
-    const [ low, setLow] = useState('')
-    const [ high, setHigh] = useState('')
+    const [ items, setItems] = useState({
+        temp: '',
+        img: '',
+        description: '',
+        low: '',
+        high: '',
+        wind: ''
+    })
 
-    let current = Math.round(temp);
-    let High = Math.round(high);
-    let Low = Math.floor(low);
+    let current = Math.round (items.temp);
+    let High = Math.round(items.high);
+    let Low = Math.floor(items.low);
 
-    let icon = 'http://openweathermap.org/img/w/' + img.toString() + '.png';
+    let icon = 'http://openweathermap.org/img/w/' + items.img + '.png';
 
 
     const API_KEY = process.env.REACT_APP_API_KEY;
@@ -26,12 +28,14 @@ const Weather = () => {
         .then( res => res.json())
         .then(data => {
             if (isMounted){
-                setItems(data)
-                setTemp(data.list[0].main.temp)
-                setImg(data.list[0].weather[0].icon)
-                setDescription(data.list[0].weather[0].description)
-                setHigh(data.list[0].main.temp_max)
-                setLow(data.list[0].main.temp_min)
+                setItems({
+                    temp: data.list[0].main.temp,
+                    img: data.list[0].weather[0].icon,
+                    description: data.list[0].weather[0].description,
+                    low: data.list[0].main.temp_min,
+                    high: data.list[0].main.temp_max,
+                    wind: data.list[0].main.temp_min
+                })
             }
         })
         .catch((error) => {
@@ -40,19 +44,26 @@ const Weather = () => {
         
         return () => { isMounted = false;}
     }, [])
-
-    
-    console.log(items)
     
     return (
         <div className="weather">
-            <img className="icon" src={icon} alt='weather' />
-            <p className='description'>{description.toString()}</p>
-            <hr className="weather-line" />
-            <div className="temp">
-                <p className='current'>{current}<span className='F'>&#8457;</span></p>
-                <p className='min-max'>{Low}/{High}</p>
+            <p className='current'>{current}<span className='F'>&#8457;</span></p>
+
+            <div className="extras">
+                <p className='high'>High: {High}&deg;</p>
+                <p className='low'>Low: {Low}&deg;</p>
+                <p className='wind'>Wind: {items.wind}</p>
             </div>
+
+            <img className="icon" src={icon} alt='weather' />
+            <p className='description'>{items.description}</p>
+
+
+
+
+            {/* <hr className="weather-line" /> */}
+            {/* <div className="temp"> */}
+            {/* </div> */}
         </div>
     )
 }
