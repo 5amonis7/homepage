@@ -15,7 +15,7 @@ const Weather = () => {
     let High = Math.round(items.high);
     let Low = Math.floor(items.low);
 
-    let icon = 'http://openweathermap.org/img/w/' + items.img + '.png';
+    let icon = 'https://openweathermap.org/img/w/' + items.img + '.png';
 
 
    
