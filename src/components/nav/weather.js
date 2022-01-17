@@ -22,32 +22,26 @@ const Weather = () => {
 
     // Fecthing weather from openweathermap api
     useEffect(() => {
-        const API_KEY = process.env.REACT_APP_API_KEY;
-        const API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=Mableton&appid=${API_KEY}&units=imperial`;
-        let isMounted = true;
-        fetch(API_URL)
-        .then( res => res.json())
-        .then(data => {
-            if (isMounted){
-                setItems({
-                    temp: data.list[0].main.temp,
-                    img: data.list[0].weather[0].icon,
-                    description: data.list[0].weather[0].description,
-                    low: data.list[0].main.temp_min,
-                    high: data.list[0].main.temp_max,
-                    wind: data.list[0].main.temp_min
-                })
-            }
-        })
-        .catch((error) => {
+        async function fetchData(){
+            const API_KEY = process.env.REACT_APP_API_KEY;
+            const API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=Mableton&appid=${API_KEY}&units=imperial`;
+            let data = await fetch(API_URL)
+            data = await data.json()
+            setItems({
+                temp: data.list[0].main.temp,
+                img: data.list[0].weather[0].icon,
+                description: data.list[0].weather[0].description,
+                low: data.list[0].main.temp_min,
+                high: data.list[0].main.temp_max,
+                wind: data.list[0].main.temp_min
+            }) 
+        }
+        fetchData().catch((error) => {
             console.log(error);
-        })
-        
-        return () => { isMounted = false;}
+        }) 
+        fetchData()  
     }, [])
 
-    
-    console.log(items)
 
     return (
         <div className="weather">
