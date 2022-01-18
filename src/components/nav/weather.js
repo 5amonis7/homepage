@@ -27,13 +27,14 @@ const Weather = () => {
             const API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=Mableton&appid=${API_KEY}&units=imperial`;
             let data = await fetch(API_URL)
             data = await data.json()
+            console.log(data)
             setItems({
                 temp: data.list[0].main.temp,
                 img: data.list[0].weather[0].icon,
                 description: data.list[0].weather[0].description,
                 low: data.list[0].main.temp_min,
                 high: data.list[0].main.temp_max,
-                wind: data.list[0].main.temp_min
+                wind: data.list[0].wind.speed
             }) 
         }
         fetchData().catch((error) => {
@@ -55,7 +56,6 @@ const Weather = () => {
 
             <img className="icon" src={icon} alt='weather' />
             <p className='description'>{items.description}</p>
-
 
 
 
