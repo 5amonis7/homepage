@@ -11,7 +11,6 @@ const Shows = () => {
     return (
         <div className='shows'>
             <p className="shows-title">Shows</p>
-            <hr className="shows-line" />
             <div className="shows-links">
                 <a rel="noreferrer" target="_blank" href={youtube.url}><img className="youtube" src={require("./images/youtube.png")} alt="youtube" /></a>
                 <a rel="noreferrer" target="_blank" href={disneyplus.url}><img className="disneyplus" src={require("./images/disney .png")} alt="disney plus" /></a>

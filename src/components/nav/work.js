@@ -10,7 +10,6 @@ const work = () => {
     return (
         <div className='work'>
             <p className='work-title'>Work</p>
-            <hr className='work-line' /> 
             <div className='work-links'>
                 <a rel="noreferrer" target="_blank" href={linkedin.url} class='linkedin' ><img src={require('./images/linkedin.png')} alt="linkedin" /></a>
                 <a rel="noreferrer" target="_blank" href={github.url} class='github' ><img src={require('./images/github1.png')} alt="github" /></a>
